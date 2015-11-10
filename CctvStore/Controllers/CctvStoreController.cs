@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CctvStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,13 @@ namespace CctvStore.Controllers
 {
     public class CctvStoreController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: CctvStore
-        public ActionResult Index()
+        [ChildActionOnly]
+        public ActionResult SubCategoryMenu()
         {
-            return View();
+            var subcategories = db.SubCategories.ToList();
+            return PartialView(subcategories);
         }
     }
 }

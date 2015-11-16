@@ -52,7 +52,7 @@ namespace CctvStore.Controllers
             {
                 db.Catalogs.Add(catalog);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Admin","Home");
             }
 
             return View(catalog);

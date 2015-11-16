@@ -14,5 +14,30 @@ namespace CctvStore.Controllers
 
             return View();
         }
+        public ActionResult Admin()
+        {
+            ViewBag.Title = "Admin Page";
+
+            return View();
+        }
+        public ActionResult HomeSpecification()
+        {
+            return View();
+        }
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Upload(HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+            {
+                string path = Server.MapPath("~/images" + file.FileName);
+                file.SaveAs(path);
+                ViewBag.path = path;
+            }
+            else
+            {
+                ViewBag.path = "NO file recieved";
+            }
+            return View();
+        }
     }
 }

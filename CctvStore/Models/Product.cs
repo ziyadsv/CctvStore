@@ -10,11 +10,13 @@ namespace CctvStore.Models
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
-        public string Description { get; set; }      
+        public string Description { get; set; }
+        public string UrlProductImage { get; set; }
         public int? SubCategoryId { get; set; }      
         public virtual SubCategory SubCategory { get; set; }
         //public int CategoryId { get; set; }
         //public virtual Category Category { get; set; }
         public ICollection<ProductProperty> ProductProperties { get; set; }
+        public ICollection<Accessories> Accessories { get; set; }
     }
 }

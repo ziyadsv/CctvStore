@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
 
 namespace CctvStore.Models
 {
@@ -39,5 +40,30 @@ namespace CctvStore.Models
         public System.Data.Entity.DbSet<CctvStore.Models.ProductProperty> ProductProperties { get; set; }
 
         public System.Data.Entity.DbSet<CctvStore.Models.Catalog> Catalogs { get; set; }
+        public DbSet<Upload> Uploads { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.Specification> Specifications { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpCamera> SpCameras { get; set; }
+        public System.Data.Entity.DbSet<CctvStore.Models.SpImage> SpImages { get; set; }
+        public System.Data.Entity.DbSet<CctvStore.Models.SpNetwork> SpNetworks { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.Accessories> Accessories { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpInterface> SpInterfaces { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpGeneral> SpGenerals { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpVideo> SpVideos { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpAudio> SpAudios { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpHardDisk> SpHardDisks { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpRecordPlayback> SpRecordPlaybacks { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpVideoAudioInput> SpVideoAudioInputs { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SpVideoAudioOutput> SpVideoAudioOutputs { get; set; }
     }
 }

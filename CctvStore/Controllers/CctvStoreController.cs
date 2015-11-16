@@ -17,5 +17,10 @@ namespace CctvStore.Controllers
             var subcategories = db.SubCategories.ToList();
             return PartialView(subcategories);
         }
+
+        public ActionResult CreateIndex()
+        {
+            return View();
+        }
     }
 }

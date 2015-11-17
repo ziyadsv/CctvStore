@@ -209,7 +209,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CatalogsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
-    <Compile Include="Controllers\CctvStoreController.cs" />
+    <Compile Include="Controllers\_CctvStoreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductPropertiesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -262,6 +262,8 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CatalogCategoryVM.cs" />
+    <Compile Include="ViewModel\SpecificationVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -343,7 +345,7 @@
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Shared\_SideMenu.cshtml" />
-    <Content Include="Views\CctvStore\SubCategoryMenu.cshtml" />
+    <Content Include="Views\_CctvStore\SubCategoryMenu.cshtml" />
     <Content Include="Views\Home\Upload.cshtml" />
     <Content Include="Views\Upload\ProductImagei.cshtml" />
     <Content Include="Views\Upload\index.cshtml" />
@@ -353,7 +355,7 @@
     <Content Include="Views\Specifications1\Details.cshtml" />
     <Content Include="Views\Specifications1\Edit.cshtml" />
     <Content Include="Views\Specifications1\Index.cshtml" />
-    <Content Include="Views\CctvStore\CreateIndex.cshtml" />
+    <Content Include="Views\_CctvStore\CreateIndex.cshtml" />
     <Content Include="Views\Home\Admin.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
@@ -402,10 +404,12 @@
     <Content Include="Views\Specifications\Edit.cshtml" />
     <Content Include="Views\Specifications\Index.cshtml" />
     <Content Include="Views\Specifications\HomeSpecification.cshtml" />
+    <Content Include="Views\_CctvStore\ProductList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\CctvStore\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

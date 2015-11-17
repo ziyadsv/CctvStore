@@ -1,20 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+//Edited Details view
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CctvStore.Models;
+using CctvStore.ViewModel;
 
 namespace CctvStore.Controllers
 {
     public class ProductsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
-        // GET: Products
+        
+        // GET: ProductsList
+        public ActionResult ProductList()
+        {
+            var viemodel = new SpecificationVM();
+            viemodel.Specification = db.Specifications.Include(i => i.SpCamera)
+                                                      .Include(k => k.SpImage)
+                                                      .Include(s=>s.SpInterface);
+            return PartialView();
+        }
         public ActionResult Index()
         {
             var products = db.Products.Include(p => p.SubCategory);

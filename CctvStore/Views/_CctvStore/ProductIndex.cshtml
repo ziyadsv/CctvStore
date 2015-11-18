@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CctvStore.Models.Product>
+
+
+@*<table class="table">
+    <tr>
+        <th>
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubCategory.SubCategoryName)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>       
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                image
+                @Html.DisplayFor(modelItem => item.UrlProductImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubCategory.SubCategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>                      
+        </tr>
+                <tr class="well">
+
+                    <td class="col-md-4">@Html.ActionLink("Download", "Create", "Products", new { id = item.ProductId })</td>
+                    <td class="col-md-4">@Html.ActionLink("Specification", "HomeSpecification", "Home")</td>
+                    <td class="col-md-4">@Html.ActionLink("Accessories", "Index", "Accessories")</td>
+
+                </tr>
+    }
+
+</table>*@
+
+@foreach (var item in Model)
+{
+    <div class="jumbotron">
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    @Html.DisplayFor(modelItem => item.UrlProductImage)
+                    <img class="media-object" src="..." alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">@Html.DisplayFor(modelItem => item.ProductName)</h4>
+                @Html.DisplayFor(modelItem => item.Model)
+                @Html.DisplayFor(modelItem => item.Description)
+            </div>
+        </div>
+        <div class="">
+            <div class="col-md-4">@Html.ActionLink("Download", "Create", "Products", new { id = item.ProductId })</div>
+            <div class="col-md-4">@Html.ActionLink("Specification", "SpecificationIndex", "_CctvStore", new {  ids = item.ProductId },null)</div>
+            <div class="col-md-4">@Html.ActionLink("Accessories", "AccessoriesIndex", "_CctvStore", new { idd = item.ProductId }, null)</div>
+        </div>
+    </div>
+}

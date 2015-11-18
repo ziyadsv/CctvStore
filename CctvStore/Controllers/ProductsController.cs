@@ -58,7 +58,7 @@ namespace CctvStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,UrlProductImage,SubCategoryId")] Product product)
+        public ActionResult Create([Bind(Include = "ProductId,Model,ProductName,Description,UrlProductImage,SubCategoryId")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace CctvStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductId,ProductName,Description,UrlProductImage,SubCategoryId")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductId,Model,ProductName,Description,UrlProductImage,SubCategoryId")] Product product)
         {
             if (ModelState.IsValid)
             {

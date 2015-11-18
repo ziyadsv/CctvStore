@@ -209,6 +209,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CatalogsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\_AdminController.cs" />
     <Compile Include="Controllers\_CctvStoreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductPropertiesController.cs" />
@@ -405,6 +406,10 @@
     <Content Include="Views\Specifications\Index.cshtml" />
     <Content Include="Views\Specifications\HomeSpecification.cshtml" />
     <Content Include="Views\_CctvStore\ProductList.cshtml" />
+    <Content Include="Views\_CctvStore\ProductIndex.cshtml" />
+    <Content Include="Views\_CctvStore\SpecificationIndex.cshtml" />
+    <Content Include="Views\_CctvStore\AccessoriesIndex.cshtml" />
+    <Content Include="Views\_Admin\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

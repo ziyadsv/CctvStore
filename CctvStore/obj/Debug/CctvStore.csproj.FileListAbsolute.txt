@@ -72,6 +72,7 @@ C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\b
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\bin\System.Web.Http.Owin.xml
+C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.csprojResolveAssemblyReference.cache
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.Migrations.de.resources
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.Migrations.mki.resources
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.csproj.GenerateResource.Cache

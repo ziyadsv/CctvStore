@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+
 
 namespace CctvStore.Controllers
 {
@@ -17,6 +19,35 @@ namespace CctvStore.Controllers
         {
             var subcategories = db.SubCategories.ToList();
             return PartialView(subcategories);
+        }
+
+        //Product Listing Pages
+        public ActionResult ProductIndex()
+        {
+            var products = db.Products.Include(p => p.SubCategory);
+            return View(products.ToList());
+        }
+
+        //Specification Page
+        public ActionResult SpecificationIndex(int ids)
+        {                            
+                var specifications = db.Specifications
+                    .Include(s => s.Product).Include(s => s.SpAudio)
+                    .Include(s => s.SpCamera).Include(s => s.SpGeneral)
+                    .Include(s => s.SpHardDisk).Include(s => s.SpImage)
+                    .Include(s => s.SpInterface).Include(s => s.SpNetwork)                    
+                    .Include(s => s.SpRecordPlayback).Include(s => s.SpVideo)
+                    .Include(s => s.SpVideoAudioInput).Include(s => s.SpVideoAudioOutput)
+                    .Where(e=>e.ProductId == ids).OrderBy(v => v.Product.ProductName);                       
+            return View(specifications);
+        }
+
+        // GET: Accessories
+        public ActionResult AccessoriesIndex(int idd)
+        {
+            var accessories = db.Accessories.Include(a => a.Product)
+                .Where(r=>r.ProductId == idd).OrderBy(n=>n.Title);
+            return View(accessories.ToList());
         }
 
         public ActionResult ProductList(string Categoriesstring, string SubCategoriesstring, string ProductString)
@@ -51,5 +82,8 @@ namespace CctvStore.Controllers
             }
             return View(viewmodel);
         }
+
+       
+       
     }
 }

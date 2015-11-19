@@ -1,23 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+//Edited Details view
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CctvStore.Models;
+using CctvStore.ViewModel;
 
 namespace CctvStore.Controllers
 {
-    public class ProductsController : Controller
+    public class Products1Controller : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
-        // GET: Products
+        
+        // GET: ProductsList
+        public ActionResult ProductList()
+        {
+            var viemodel = new SpecificationVM();
+            viemodel.Specification = db.Specifications.Include(i => i.SpCamera)
+                                                      .Include(k => k.SpImage)
+                                                      .Include(s=>s.SpInterface);
+            return PartialView();
+        }
         public ActionResult Index()
         {
-            var products = db.Products.Include(p => p.Catalog).Include(p => p.Category).Include(p => p.SubCategory);
+            var products = db.Products.Include(p => p.SubCategory);
             return View(products.ToList());
         }
 
@@ -39,8 +49,6 @@ namespace CctvStore.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            ViewBag.CatalogId = new SelectList(db.Catalogs, "CatalogId", "CatalogName");
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName");
             ViewBag.SubCategoryId = new SelectList(db.SubCategories, "SubCategoryId", "SubCategoryName");
             return View();
         }
@@ -50,7 +58,7 @@ namespace CctvStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductId,Model,ProductName,Description,UrlProductImage,SubCategoryId,CategoryId,CatalogId")] Product product)
+        public ActionResult Create([Bind(Include = "ProductId,Model,ProductName,Description,UrlProductImage,SubCategoryId")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -59,8 +67,6 @@ namespace CctvStore.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CatalogId = new SelectList(db.Catalogs, "CatalogId", "CatalogName", product.CatalogId);
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName", product.CategoryId);
             ViewBag.SubCategoryId = new SelectList(db.SubCategories, "SubCategoryId", "SubCategoryName", product.SubCategoryId);
             return View(product);
         }
@@ -77,8 +83,6 @@ namespace CctvStore.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CatalogId = new SelectList(db.Catalogs, "CatalogId", "CatalogName", product.CatalogId);
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName", product.CategoryId);
             ViewBag.SubCategoryId = new SelectList(db.SubCategories, "SubCategoryId", "SubCategoryName", product.SubCategoryId);
             return View(product);
         }
@@ -88,7 +92,7 @@ namespace CctvStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductId,Model,ProductName,Description,UrlProductImage,SubCategoryId,CategoryId,CatalogId")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductId,Model,ProductName,Description,UrlProductImage,SubCategoryId")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -96,8 +100,6 @@ namespace CctvStore.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CatalogId = new SelectList(db.Catalogs, "CatalogId", "CatalogName", product.CatalogId);
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName", product.CategoryId);
             ViewBag.SubCategoryId = new SelectList(db.SubCategories, "SubCategoryId", "SubCategoryName", product.SubCategoryId);
             return View(product);
         }

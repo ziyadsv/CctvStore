@@ -209,11 +209,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CatalogsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\_AdminController.cs" />
     <Compile Include="Controllers\_CctvStoreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductPropertiesController.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\Products1Controller.cs" />
     <Compile Include="Controllers\SpCamerasController.cs" />
     <Compile Include="Controllers\SpecificationsController.cs" />
     <Compile Include="Controllers\SpGeneralsController.cs" />
@@ -325,11 +327,11 @@
     <Content Include="Views\SubCategories\Details.cshtml" />
     <Content Include="Views\SubCategories\Edit.cshtml" />
     <Content Include="Views\SubCategories\Index.cshtml" />
-    <Content Include="Views\Products1\Create.cshtml" />
-    <Content Include="Views\Products1\Delete.cshtml" />
-    <Content Include="Views\Products1\Details.cshtml" />
-    <Content Include="Views\Products1\Edit.cshtml" />
-    <Content Include="Views\Products1\Index.cshtml" />
+    <Content Include="Views\Products11\Create.cshtml" />
+    <Content Include="Views\Products11\Delete.cshtml" />
+    <Content Include="Views\Products11\Details.cshtml" />
+    <Content Include="Views\Products11\Edit.cshtml" />
+    <Content Include="Views\Products11\Index.cshtml" />
     <Content Include="Views\ProductProperties\Create.cshtml" />
     <Content Include="Views\ProductProperties\Delete.cshtml" />
     <Content Include="Views\ProductProperties\Details.cshtml" />
@@ -358,9 +360,9 @@
     <Content Include="Views\Specifications1\Index.cshtml" />
     <Content Include="Views\_CctvStore\CreateIndex.cshtml" />
     <Content Include="Views\Home\Admin.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products1\Create.cshtml" />
+    <Content Include="Views\Products1\Details.cshtml" />
+    <Content Include="Views\Products1\Index.cshtml" />
     <Content Include="Views\Specifications1\Browse.cshtml" />
     <Content Include="Views\Specifications1\Home.cshtml" />
     <Content Include="Views\Home\HomeSpecification.cshtml" />
@@ -410,11 +412,20 @@
     <Content Include="Views\_CctvStore\SpecificationIndex.cshtml" />
     <Content Include="Views\_CctvStore\AccessoriesIndex.cshtml" />
     <Content Include="Views\_Admin\Admin.cshtml" />
+    <Content Include="Views\Catalogs\Create1.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\_Admin\HomeSpecification.cshtml" />
+    <Content Include="Views\_Admin\ProductList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
     <Folder Include="Views\CctvStore\" />
+    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

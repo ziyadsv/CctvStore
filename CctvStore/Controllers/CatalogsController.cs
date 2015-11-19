@@ -13,6 +13,21 @@ namespace CctvStore.Controllers
     public class CatalogsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        //[HttpPost]
+      //  [ValidateAntiForgeryToken]
+        [ChildActionOnly]
+        public ActionResult Create1([Bind(Include = "CatalogId,CatalogName")] Catalog catalog)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Catalogs.Add(catalog);
+                db.SaveChanges();
+                return RedirectToAction("Admin", "Home");
+            }
+
+            return PartialView(catalog);
+        }
+
 
         // GET: Catalogs
         public ActionResult Index()
@@ -46,6 +61,7 @@ namespace CctvStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ChildActionOnly]
         public ActionResult Create([Bind(Include = "CatalogId,CatalogName")] Catalog catalog)
         {
             if (ModelState.IsValid)

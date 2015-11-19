@@ -1,4 +1,4 @@
-﻿    @model IEnumerable<CctvStore.Models.Product>
+﻿@model IEnumerable<CctvStore.Models.Product>
 
 @{
     ViewBag.Title = "Index";
@@ -12,16 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Catalog.CatalogName)
+            @Html.DisplayNameFor(model => model.SubCategory.Category.Catalog.CatalogName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
+            @Html.DisplayNameFor(model => model.SubCategory.Category.CategoryName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SubCategory.SubCategoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Model)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ProductName)
@@ -29,25 +26,19 @@
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UrlProductImage)
-        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Catalog.CatalogName)
+            @Html.DisplayFor(modelItem => item.SubCategory.Category.Catalog.CatalogName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            @Html.DisplayFor(modelItem => item.SubCategory.Category.CategoryName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SubCategory.SubCategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Model)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ProductName)
@@ -56,19 +47,11 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UrlProductImage)
-        </td>
-        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
             @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
         </td>
     </tr>
-    @*<tr class="well">
-        <td class="col-md-4">@Html.ActionLink("Download", "Create", "Products", new { id = item.ProductId })</td>
-        <td class="col-md-4">@Html.ActionLink("Specification", "SpecificationIndex", "_CctvStore", new { ids = item.ProductId }, null)</td>
-        <td class="col-md-4">@Html.ActionLink("Accessories", "AccessoriesIndex", "_CctvStore", new { idd = item.ProductId }, null)</td>
-    </tr>*@
 }
 
 </table>

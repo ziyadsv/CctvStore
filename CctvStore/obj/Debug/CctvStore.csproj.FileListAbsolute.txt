@@ -78,3 +78,4 @@ C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\o
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.csproj.GenerateResource.Cache
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.dll
 C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.pdb
+C:\Users\shetty-rami\documents\visual studio 2015\Projects\CctvStore\CctvStore\obj\Debug\CctvStore.Migrations.fo.resources

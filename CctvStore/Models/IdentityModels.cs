@@ -65,5 +65,11 @@ namespace CctvStore.Models
         public System.Data.Entity.DbSet<CctvStore.Models.SpVideoAudioInput> SpVideoAudioInputs { get; set; }
 
         public System.Data.Entity.DbSet<CctvStore.Models.SpVideoAudioOutput> SpVideoAudioOutputs { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.SuccessStory> SuccessStories { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.Download> Downloads { get; set; }
+
+        public System.Data.Entity.DbSet<CctvStore.Models.TroubleShooting> TroubleShootings { get; set; }
     }
 }

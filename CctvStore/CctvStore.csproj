@@ -209,8 +209,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CatalogsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\DownloadsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\SuccessStoriesController.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\TroubleShootingsController.cs" />
     <Compile Include="Controllers\_AdminController.cs" />
     <Compile Include="Controllers\_CctvStoreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -237,15 +240,20 @@
     <Compile Include="Migrations\201511101058051_mki.Designer.cs">
       <DependentUpon>201511101058051_mki.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511211141221_fo.cs" />
+    <Compile Include="Migrations\201511211141221_fo.Designer.cs">
+      <DependentUpon>201511211141221_fo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessories.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Catalog.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Download.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\News.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ProductProperty.cs" />
     <Compile Include="Models\SpAudio.cs" />
     <Compile Include="Models\SpCamera.cs" />
     <Compile Include="Models\Specification.cs" />
@@ -260,6 +268,8 @@
     <Compile Include="Models\SpVideoAudioOutput.cs" />
     <Compile Include="Models\SpVideoOutput.cs" />
     <Compile Include="Models\SubCategory.cs" />
+    <Compile Include="Models\SuccessStory.cs" />
+    <Compile Include="Models\TroubleShooting.cs" />
     <Compile Include="Models\Upload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -422,6 +432,23 @@
     <Content Include="Views\_Admin\ProductList.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\SuccessStories\Create.cshtml" />
+    <Content Include="Views\SuccessStories\Delete.cshtml" />
+    <Content Include="Views\SuccessStories\Details.cshtml" />
+    <Content Include="Views\SuccessStories\Edit.cshtml" />
+    <Content Include="Views\SuccessStories\Index.cshtml" />
+    <Content Include="Views\SuccessStories\SuccesStoryMenu.cshtml" />
+    <Content Include="Views\Home\OnlineSupport.cshtml" />
+    <Content Include="Views\Downloads\Create.cshtml" />
+    <Content Include="Views\Downloads\Delete.cshtml" />
+    <Content Include="Views\Downloads\Details.cshtml" />
+    <Content Include="Views\Downloads\Edit.cshtml" />
+    <Content Include="Views\Downloads\Index.cshtml" />
+    <Content Include="Views\TroubleShootings\Create.cshtml" />
+    <Content Include="Views\TroubleShootings\Delete.cshtml" />
+    <Content Include="Views\TroubleShootings\Details.cshtml" />
+    <Content Include="Views\TroubleShootings\Edit.cshtml" />
+    <Content Include="Views\TroubleShootings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -443,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511101058051_mki.resx">
       <DependentUpon>201511101058051_mki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511211141221_fo.resx">
+      <DependentUpon>201511211141221_fo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

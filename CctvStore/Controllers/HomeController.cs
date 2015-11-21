@@ -14,6 +14,18 @@ namespace CctvStore.Controllers
 
             return View();
         }
+        public ActionResult About()
+        {
+            ViewBag.Title = "Home Page";
+
+            return View();
+        }
+        public ActionResult ContactUs()
+        {
+            ViewBag.Title = "Home Page";
+
+            return View();
+        }
         public ActionResult Admin()
         {
             ViewBag.Title = "Admin Page";

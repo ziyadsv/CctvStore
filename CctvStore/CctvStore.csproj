@@ -420,6 +420,8 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\_Admin\HomeSpecification.cshtml" />
     <Content Include="Views\_Admin\ProductList.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
